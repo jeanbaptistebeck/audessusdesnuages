@@ -7,7 +7,9 @@
     <link rel="icon" href="{{ "/favicon.ico" | relative_url }}" />
   </head>
   <body>
-    {% include navigation.html %}
+    {% if page.nav != false %}
+      {% include navigation.html %}
+    {% endif %}
     {{ content }}
   </body>
 </html>
